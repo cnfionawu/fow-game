@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOW Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Page 1: Initial Choices -->
+    <div id="page1" class="page">
+        <header>
+            <div class="time">
+                <h3>Time:</h3>
+                <h3 id="timer"></h3>
+            </div>
+            <div class="earning">
+                <h3>Earned:</h3>
+            </div>
+        </header>
+
+        <div class="choices">
+            <div class="first">
+                <h2>Uber (Berkeley)</h2>
+                <h4 id="timer1" class="job-countdown"></h4>
+                <p>Wait Time: 20s</p>
+                <p>Earning: $20</p>
+            </div>
+            <div class="second">
+                <h2>UberEats (Berkeley)</h2>
+                <h4 id="timer2" class="job-countdown"></h4>
+                <p>Wait Time: 10s</p>
+                <p>Earning: $15</p>
+            </div>
+            <div class="third">
+                <h2>Uber (SF)</h2>
+                <h4 id="timer3" class="job-countdown"></h4>
+                <p>Wait Time: 40s</p>
+                <p>Earning: $40</p>
+            </div>
+            <div class="fourth">
+                <h2>UberEats (SF)</h2>
+                <h4 id="timer4" class="job-countdown"></h4>
+                <p>Wait Time: 15s</p>
+                <p>Earning: $20</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2: Game Interface -->
+    <div id="page2" class="page">
+        <header>
+            <div class="gametime">
+                <h3>Time:</h3>
+                <h3 id="gametimer"></h3>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <img id="image-display" src="" alt="Image">
+            <input type="text" id="user-input">
+            <p id="feedback"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
