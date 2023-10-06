@@ -18,16 +18,17 @@ const data = [];
 setInterval(countupTime, 1000);
 var seconds = 0;
 function countupTime() {
+    console.log("countupTime called");
     seconds++;
     document.getElementById("timer").innerHTML= seconds;
+    if (seconds == 30) {
+        const gameArrToSend = JSON.stringify(data); // 2. Convert string array into a single JSON string
+        console.log("Sending experiment result:", gameArrToSend); // 3. Check data type is String or JSON String
+        console.log("Type of experiment result:", typeof gameArrToSend);
+        window.parent.postMessage({ type: 'gameArr', data: gameArrToSend }, '*');
+    }
 }
 
-if (seconds == 30) {
-    const gameArrToSend = JSON.stringify(data); // 2. Convert string array into a single JSON string
-    console.log("Sending experiment result:", gameArrToSend); // 3. Check data type is String or JSON String
-    console.log("Type of experiment result:", typeof gameArrToSend);
-    window.parent.postMessage({ type: 'gameArr', data: gameArrToSend }, '*');
-}
 
 
 function randomchoose(min, max) {
